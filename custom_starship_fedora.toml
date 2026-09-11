@@ -1,6 +1,3 @@
-# custom_starship_fedora
-
-
 # ~/.config/starship.toml
 
 format = """\
@@ -10,29 +7,10 @@ format = """\
 $time\
 [](fg:#EAE3DB bg:#3A8D94)\
 $directory\
-[](fg:#3A8D94 bg:#265063)\
-$git_branch\
-$git_status\
-$git_metrics\
-[](fg:#265063 bg:#31708E)\
-$c\
-$cpp\
-$elixir\
-$elm\
-$golang\
-$gradle\
-$haskell\
-$java\
-$julia\
-$maven\
-$nodejs\
-$bun\
-$nim\
-$rust\
-$scala\
-[](fg:#31708E bg:#1C3A5E)\
-$docker_context\
-[](fg:#1C3A5E bg:#121820)\
+${git_branch}${git_status}${git_metrics}\
+${c}${cpp}${elixir}${elm}${golang}${gradle}${haskell}${java}${julia}${maven}${nodejs}${bun}${nim}${rust}${scala}\
+${docker_context}\
+[](fg:#3A8D94 bg:#121820)\
 $character"""
 
 [directory]
@@ -42,7 +20,7 @@ truncation_symbol = "…/"
 read_only = " 🔒"
 
 [git_branch]
-format = '[ $symbol$branch(:$remote_branch) ]($style)'
+format = '[](fg:#3A8D94 bg:#265063)[ $symbol$branch(:$remote_branch) ]($style)'
 symbol = "  "
 style = "fg:#EAE3DB bg:#265063"
 
@@ -54,7 +32,7 @@ ahead = "⇡"
 behind = "⇣"
 diverged = "⇕"
 untracked = " Novo"
-stash_count = " Guardado"
+stashed = " Guardado"
 modified = " Modificado"
 staged = " Pronto"
 renamed = " Renomeado"
@@ -77,82 +55,82 @@ format = '[[ ♥ $time ](bg:#EAE3DB fg:#22150C)]($style)'
 [c]
 symbol = " "
 style = "fg:#EAE3DB bg:#31708E"
-format = '[ $symbol($version) ]($style)'
+format = '[](fg:#265063 bg:#31708E)[ $symbol($version) ]($style)'
 
 [cpp]
 symbol = " "
 style = "fg:#EAE3DB bg:#31708E"
-format = '[ $symbol($version) ]($style)'
+format = '[](fg:#265063 bg:#31708E)[ $symbol($version) ]($style)'
 
 [elixir]
 symbol = " "
 style = "fg:#EAE3DB bg:#31708E"
-format = '[ $symbol($version) ]($style)'
+format = '[](fg:#265063 bg:#31708E)[ $symbol($version) ]($style)'
 
 [elm]
 symbol = " "
 style = "fg:#EAE3DB bg:#31708E"
-format = '[ $symbol($version) ]($style)'
+format = '[](fg:#265063 bg:#31708E)[ $symbol($version) ]($style)'
 
 [golang]
 symbol = " "
 style = "fg:#EAE3DB bg:#31708E"
-format = '[ $symbol($version) ]($style)'
+format = '[](fg:#265063 bg:#31708E)[ $symbol($version) ]($style)'
 
 [gradle]
 style = "fg:#EAE3DB bg:#31708E"
-format = '[ $symbol($version) ]($style)'
+format = '[](fg:#265063 bg:#31708E)[ $symbol($version) ]($style)'
 
 [haskell]
 symbol = " "
 style = "fg:#EAE3DB bg:#31708E"
-format = '[ $symbol($version) ]($style)'
+format = '[](fg:#265063 bg:#31708E)[ $symbol($version) ]($style)'
 
 [java]
 symbol = " "
 style = "fg:#EAE3DB bg:#31708E"
-format = '[ $symbol($version) ]($style)'
+format = '[](fg:#265063 bg:#31708E)[ $symbol($version) ]($style)'
 
 [julia]
 symbol = " "
 style = "fg:#EAE3DB bg:#31708E"
-format = '[ $symbol($version) ]($style)'
+format = '[](fg:#265063 bg:#31708E)[ $symbol($version) ]($style)'
 
 [maven]
 style = "fg:#EAE3DB bg:#31708E"
-format = '[ $symbol($version) ]($style)'
+format = '[](fg:#265063 bg:#31708E)[ $symbol($version) ]($style)'
 
 [nodejs]
 symbol = " "
 style = "fg:#EAE3DB bg:#31708E"
-format = '[ $symbol($version) ]($style)'
+format = '[](fg:#265063 bg:#31708E)[ $symbol($version) ]($style)'
 
 [bun]
 symbol = " "
 style = "fg:#EAE3DB bg:#31708E"
-format = '[ $symbol($version) ]($style)'
+format = '[](fg:#265063 bg:#31708E)[ $symbol($version) ]($style)'
 
 [nim]
 symbol = "󰆥 "
 style = "fg:#EAE3DB bg:#31708E"
-format = '[ $symbol($version) ]($style)'
+format = '[](fg:#265063 bg:#31708E)[ $symbol($version) ]($style)'
 
 [rust]
 symbol = " "
 style = "fg:#EAE3DB bg:#31708E"
-format = '[ $symbol($version) ]($style)'
+format = '[](fg:#265063 bg:#31708E)[ $symbol($version) ]($style)'
 
 [scala]
 symbol = " "
 style = "fg:#EAE3DB bg:#31708E"
-format = '[ $symbol($version) ]($style)'
+format = '[](fg:#265063 bg:#31708E)[ $symbol($version) ]($style)'
 
 # --- Infraestrutura ---
 
 [docker_context]
 symbol = " "
 style = "fg:#8DFBD2 bg:#1C3A5E"
-format = '[ $symbol$context ]($style)'
+format = '[](fg:#31708E bg:#1C3A5E)[ $symbol$context ]($style)'
 
 [hg_branch]
 format = "[ $symbol$branch ]($style)"
