@@ -1,0 +1,167 @@
+# custom_starship_fedora
+
+
+# ~/.config/starship.toml
+
+format = """\
+[](bg:#121820 fg:#D59A6F)\
+[󱄅 ](bg:#D59A6F fg:#22150C)\
+[](fg:#D59A6F bg:#EAE3DB)\
+$time\
+[](fg:#EAE3DB bg:#3A8D94)\
+$directory\
+[](fg:#3A8D94 bg:#265063)\
+$git_branch\
+$git_status\
+$git_metrics\
+[](fg:#265063 bg:#31708E)\
+$c\
+$cpp\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$maven\
+$nodejs\
+$bun\
+$nim\
+$rust\
+$scala\
+[](fg:#31708E bg:#1C3A5E)\
+$docker_context\
+[](fg:#1C3A5E bg:#121820)\
+$character"""
+
+[directory]
+format = "[ ﱮ $path ]($style)"
+style = "fg:#F5F5F5 bg:#3A8D94"
+truncation_symbol = "…/"
+read_only = " 🔒"
+
+[git_branch]
+format = '[ $symbol$branch(:$remote_branch) ]($style)'
+symbol = "  "
+style = "fg:#EAE3DB bg:#265063"
+
+[git_status]
+format = '[$all_status$ahead_behind ]($style)'
+style = "fg:#EAE3DB bg:#265063"
+conflicted = " Conflito="
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
+untracked = " Novo"
+stash_count = " Guardado"
+modified = " Modificado"
+staged = " Pronto"
+renamed = " Renomeado"
+deleted = " Removido"
+
+[git_metrics]
+format = "([+$added]($added_style))[]($added_style)"
+added_style = "fg:#7DF9AA bg:#265063"
+deleted_style = "fg:#FF7B72 bg:#265063"
+disabled = false
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "bg:#EAE3DB"
+format = '[[ ♥ $time ](bg:#EAE3DB fg:#22150C)]($style)'
+
+# --- Linguagens e Runtime (Bloco Azul-Piscina) ---
+
+[c]
+symbol = " "
+style = "fg:#EAE3DB bg:#31708E"
+format = '[ $symbol($version) ]($style)'
+
+[cpp]
+symbol = " "
+style = "fg:#EAE3DB bg:#31708E"
+format = '[ $symbol($version) ]($style)'
+
+[elixir]
+symbol = " "
+style = "fg:#EAE3DB bg:#31708E"
+format = '[ $symbol($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "fg:#EAE3DB bg:#31708E"
+format = '[ $symbol($version) ]($style)'
+
+[golang]
+symbol = " "
+style = "fg:#EAE3DB bg:#31708E"
+format = '[ $symbol($version) ]($style)'
+
+[gradle]
+style = "fg:#EAE3DB bg:#31708E"
+format = '[ $symbol($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "fg:#EAE3DB bg:#31708E"
+format = '[ $symbol($version) ]($style)'
+
+[java]
+symbol = " "
+style = "fg:#EAE3DB bg:#31708E"
+format = '[ $symbol($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "fg:#EAE3DB bg:#31708E"
+format = '[ $symbol($version) ]($style)'
+
+[maven]
+style = "fg:#EAE3DB bg:#31708E"
+format = '[ $symbol($version) ]($style)'
+
+[nodejs]
+symbol = " "
+style = "fg:#EAE3DB bg:#31708E"
+format = '[ $symbol($version) ]($style)'
+
+[bun]
+symbol = " "
+style = "fg:#EAE3DB bg:#31708E"
+format = '[ $symbol($version) ]($style)'
+
+[nim]
+symbol = "󰆥 "
+style = "fg:#EAE3DB bg:#31708E"
+format = '[ $symbol($version) ]($style)'
+
+[rust]
+symbol = " "
+style = "fg:#EAE3DB bg:#31708E"
+format = '[ $symbol($version) ]($style)'
+
+[scala]
+symbol = " "
+style = "fg:#EAE3DB bg:#31708E"
+format = '[ $symbol($version) ]($style)'
+
+# --- Infraestrutura ---
+
+[docker_context]
+symbol = " "
+style = "fg:#8DFBD2 bg:#1C3A5E"
+format = '[ $symbol$context ]($style)'
+
+[hg_branch]
+format = "[ $symbol$branch ]($style)"
+symbol = " "
+
+[cmd_duration]
+format = "[  $duration ]($style)"
+style = "fg:#EAE3DB bg:#121820"
+
+[character]
+success_symbol = '[ ➜](bold #3A8D94) '
+error_symbol = '[ ✗](#E84D44) '
